@@ -72,13 +72,25 @@ class BoardGenerator:
 
             for i in range(self.side):
                 for j in range(max_len + 1):
-                    temp, temp_word_coordinates = self.__check_vertical(j, i, matrix.copy(), current_word, words_coordinates.copy())
+                    temp, temp_word_coordinates = self.__check_vertical(
+                        j,
+                        i,
+                        matrix.copy(),
+                        current_word,
+                        words_coordinates.copy()
+                    )
                     if temp[0][0] != '@':
                         self.__solve_puzzle(temp, index + 1, temp_word_coordinates)
 
             for i in range(self.side):
                 for j in range(max_len + 1):
-                    temp, temp_word_coordinates = self.__check_horizontal(i, j, matrix.copy(), current_word, words_coordinates.copy())
+                    temp, temp_word_coordinates = self.__check_horizontal(
+                        i,
+                        j,
+                        matrix.copy(),
+                        current_word,
+                        words_coordinates.copy()
+                    )
                     if temp[0][0] != '@':
                         self.__solve_puzzle(temp, index + 1, temp_word_coordinates)
         else:
