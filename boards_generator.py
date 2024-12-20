@@ -25,8 +25,10 @@ class BoardGenerator:
 
         self.current_number_of_intersections = -1
 
+        self.words_coordinates = dict({word: None for word in self.words_list})
+
     def generate_board(self):
-        self.__solve_puzzle(self.matrix, 0)
+        self.__solve_puzzle(self.matrix, 0, self.words_coordinates)
 
     def get_number_of_intersections(self, matrix):
         empty_places = sum([row.count('#') for row in matrix])
@@ -37,27 +39,32 @@ class BoardGenerator:
     @staticmethod
     def __check_horizontal(x, y, matrix, current_word, word_coordinates):
         n = len(current_word)
+        word_coordinates[current_word] = (x, y, 'horizontal')
+
         for i in range(n):
             if matrix[x][y + i] == '#' or matrix[x][y + i] == current_word[i]:
                 matrix[x] = matrix[x][:y + i] + current_word[i] + matrix[x][y + i + 1:]
             else:
                 matrix[0] = '@' + matrix[0][1:]
-                return matrix
-        return matrix
+                word_coordinates[current_word] = None
+                return matrix, word_coordinates
+        return matrix, word_coordinates
 
     @staticmethod
     def __check_vertical(x, y, matrix, current_word, word_coordinates):
         n = len(current_word)
+        word_coordinates[current_word] = (x, y, 'vertical')
+
         for i in range(n):
             if matrix[x + i][y] == '#' or matrix[x + i][y] == current_word[i]:
                 matrix[x + i] = matrix[x + i][:y] + current_word[i] + matrix[x + i][y + 1:]
             else:
                 matrix[0] = '@' + matrix[0][1:]
-                return matrix
-        return matrix
+                word_coordinates[current_word] = None
+                return matrix, word_coordinates
+        return matrix, word_coordinates
 
-    def __solve_puzzle(self, matrix, index):
-        words_coordinates = dict({word: None for word in self.words_list})
+    def __solve_puzzle(self, matrix, index, words_coordinates):
 
         if index < len(self.words_list):
             current_word = self.words_list[index]
@@ -65,19 +72,20 @@ class BoardGenerator:
 
             for i in range(self.side):
                 for j in range(max_len + 1):
-                    temp = self.__check_vertical(j, i, matrix.copy(), current_word, words_coordinates.copy())
+                    temp, temp_word_coordinates = self.__check_vertical(j, i, matrix.copy(), current_word, words_coordinates.copy())
                     if temp[0][0] != '@':
-                        self.__solve_puzzle(temp, index + 1)
+                        self.__solve_puzzle(temp, index + 1, temp_word_coordinates)
 
             for i in range(self.side):
                 for j in range(max_len + 1):
-                    temp = self.__check_horizontal(i, j, matrix.copy(), current_word, words_coordinates.copy())
+                    temp, temp_word_coordinates = self.__check_horizontal(i, j, matrix.copy(), current_word, words_coordinates.copy())
                     if temp[0][0] != '@':
-                        self.__solve_puzzle(temp, index + 1)
+                        self.__solve_puzzle(temp, index + 1, temp_word_coordinates)
         else:
             if self.get_number_of_intersections(matrix) > self.current_number_of_intersections:
                 self.matrix = matrix
                 self.current_number_of_intersections = self.get_number_of_intersections(matrix)
+                self.words_coordinates = words_coordinates
 
 
 if __name__ == "__main__":
@@ -89,3 +97,4 @@ if __name__ == "__main__":
 
     print_matrix(board_generator.matrix, board_generator.side)
     print(board_generator.current_number_of_intersections)
+    print(board_generator.words_coordinates)
