@@ -1,0 +1,63 @@
+{
+  "board_size": 8,
+  "board": "#g###b#i\n#l#barks\n#a###o#l\n#d#grove\n#e#r#k#p\n##silt#o\n###f###n\nnest###d",
+  "number_of_intersections": 5,
+  "words_with_descriptions": {
+    "glade": "An open space in a forest.",
+    "rift": "A crack, split, or break in something, particularly in the earth's surface.",
+    "bark": "The outer protective layer of a tree's trunk.",
+    "silt": "Fine sand, clay, or other material carried by running water and deposited as a sediment.",
+    "nest": "A structure or place made or chosen by a bird for laying eggs and sheltering its young.",
+    "brook": "A small, natural stream of fresh water.",
+    "pond": "A small body of still water formed naturally or by artificial means.",
+    "grove": "A small group of trees, typically without undergrowth.",
+    "isle": "A small island or peninsula, especially a scenic one."
+  },
+  "words_coordinates": {
+    "glade": [
+      0,
+      1,
+      "vertical"
+    ],
+    "rift": [
+      4,
+      3,
+      "vertical"
+    ],
+    "bark": [
+      1,
+      3,
+      "horizontal"
+    ],
+    "silt": [
+      5,
+      2,
+      "horizontal"
+    ],
+    "nest": [
+      7,
+      0,
+      "horizontal"
+    ],
+    "brook": [
+      0,
+      5,
+      "vertical"
+    ],
+    "pond": [
+      4,
+      7,
+      "vertical"
+    ],
+    "grove": [
+      3,
+      3,
+      "horizontal"
+    ],
+    "isle": [
+      0,
+      7,
+      "vertical"
+    ]
+  }
+}

@@ -160,7 +160,7 @@ def generate_boards(theme, sample_size, board_size, sample_index):
 
 
 if __name__ == "__main__":
-    run_number = 20
+    run_number = 1
 
     theme = "animals"
     sample_size = 10

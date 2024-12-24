@@ -1,0 +1,69 @@
+{
+  "board_size": 8,
+  "board": "#b#####d\n#avenuei\n#r###p#s\nshopflat\n#r#i#a#r\nzone#z#i\n#a#r#a#c\n#dslum#t",
+  "number_of_intersections": 6,
+  "words_with_descriptions": {
+    "bar": "An establishment where alcoholic beverages are sold and consumed.",
+    "plaza": "An open public area in a city where people gather, often surrounded by shops and restaurants.",
+    "zone": "A designated area within a city with a specific purpose, such as residential or commercial use.",
+    "avenue": "A broad road in a city, often lined with trees.",
+    "pier": "A structure leading out from the shore into a body of water, used as a docking or loading place for ships.",
+    "district": "A defined area within a city, especially one characterized by a particular characteristic or function.",
+    "road": "A wide way leading from one place to another, especially one with a specially prepared surface which vehicles can use.",
+    "slum": "A densely populated, poorly maintained section of a city inhabited by people of low socioeconomic status.",
+    "shop": "A small retail establishment selling items to the public.",
+    "flat": "A set of rooms forming an individual residence, typically on one floor and within a larger building."
+  },
+  "words_coordinates": {
+    "bar": [
+      0,
+      1,
+      "vertical"
+    ],
+    "plaza": [
+      2,
+      5,
+      "vertical"
+    ],
+    "zone": [
+      5,
+      0,
+      "horizontal"
+    ],
+    "avenue": [
+      1,
+      1,
+      "horizontal"
+    ],
+    "pier": [
+      3,
+      3,
+      "vertical"
+    ],
+    "district": [
+      0,
+      7,
+      "vertical"
+    ],
+    "road": [
+      4,
+      1,
+      "vertical"
+    ],
+    "slum": [
+      7,
+      2,
+      "horizontal"
+    ],
+    "shop": [
+      3,
+      0,
+      "horizontal"
+    ],
+    "flat": [
+      3,
+      4,
+      "horizontal"
+    ]
+  }
+}

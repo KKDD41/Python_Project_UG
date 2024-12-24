@@ -1,0 +1,63 @@
+{
+  "board_size": 8,
+  "board": "#g#p###l\n#l#otide\n#e#n#p#a\n#n#dreef\n#g###a#a\n#u###k#u\n#l#####n\n#f#vista",
+  "number_of_intersections": 5,
+  "words_with_descriptions": {
+    "glen": "A narrow valley, especially in Scotland.",
+    "gulf": "A large area of sea partially enclosed by land.",
+    "leaf": "The flat, typically green part of a plant, attached to a stem.",
+    "peak": "The pointed top of a mountain.",
+    "vista": "A pleasing view, especially one seen through a long, narrow opening.",
+    "tide": "The regular rising and falling of the sea, influenced by the moon's gravity.",
+    "pond": "A small body of still water formed naturally or by artificial means.",
+    "reef": "A ridge of jagged rock, coral, or sand just above or below the surface of the sea.",
+    "fauna": "The animals of a particular region, habitat, or geological period."
+  },
+  "words_coordinates": {
+    "glen": [
+      0,
+      1,
+      "vertical"
+    ],
+    "gulf": [
+      4,
+      1,
+      "vertical"
+    ],
+    "leaf": [
+      0,
+      7,
+      "vertical"
+    ],
+    "peak": [
+      2,
+      5,
+      "vertical"
+    ],
+    "vista": [
+      7,
+      3,
+      "horizontal"
+    ],
+    "tide": [
+      1,
+      4,
+      "horizontal"
+    ],
+    "pond": [
+      0,
+      3,
+      "vertical"
+    ],
+    "reef": [
+      3,
+      4,
+      "horizontal"
+    ],
+    "fauna": [
+      3,
+      7,
+      "vertical"
+    ]
+  }
+}

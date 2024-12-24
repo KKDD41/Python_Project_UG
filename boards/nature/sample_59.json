@@ -1,0 +1,63 @@
+{
+  "board_size": 8,
+  "board": "#g#f###f\n#rnest#a\n#o#r#f#u\n#vknolln\n#e#c#o#a\n#i#o#r##\n#n#v#a##\nmire####",
+  "number_of_intersections": 6,
+  "words_with_descriptions": {
+    "grove": "A small group of trees, typically without undergrowth.",
+    "fern": "A type of plant that has feather-like leaves and reproduces via spores, often found in moist, forest settings.",
+    "cove": "A small, sheltered bay on the coast.",
+    "fauna": "The animals of a particular region, habitat, or geological period.",
+    "mire": "A stretch of swampy or boggy ground.",
+    "vein": "A distinct layer of minerals within a rock, often visible and different from the surrounding material.",
+    "flora": "The plants of a particular region, habitat, or geological period.",
+    "nest": "A structure or place made or chosen by a bird for laying eggs and sheltering its young.",
+    "knoll": "A small hill or mound."
+  },
+  "words_coordinates": {
+    "grove": [
+      0,
+      1,
+      "vertical"
+    ],
+    "fern": [
+      0,
+      3,
+      "vertical"
+    ],
+    "cove": [
+      4,
+      3,
+      "vertical"
+    ],
+    "fauna": [
+      0,
+      7,
+      "vertical"
+    ],
+    "mire": [
+      7,
+      0,
+      "horizontal"
+    ],
+    "vein": [
+      3,
+      1,
+      "vertical"
+    ],
+    "flora": [
+      2,
+      5,
+      "vertical"
+    ],
+    "nest": [
+      1,
+      2,
+      "horizontal"
+    ],
+    "knoll": [
+      3,
+      2,
+      "horizontal"
+    ]
+  }
+}

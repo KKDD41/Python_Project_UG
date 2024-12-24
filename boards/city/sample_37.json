@@ -1,0 +1,57 @@
+{
+  "board_size": 8,
+  "board": "#p#g#d#l\n#ugate#a\n#b#l#p#n\n#m#lzone\n#a#e#t##\n#l#r#a##\n#l#i#x##\n###a#i##",
+  "number_of_intersections": 5,
+  "words_with_descriptions": {
+    "pub": "A local bar or tavern where people gather to drink and socialize.",
+    "mall": "A large indoor shopping complex with various stores and eateries.",
+    "galleria": "An often large and luxurious indoor facility featuring a collection of shops, restaurants, and sometimes entertainment outlets.",
+    "lane": "A narrow road or path, especially one between buildings in a city or town.",
+    "gate": "A point of entry or exit in a fence or wall, often leading to a building or enclosed area.",
+    "taxi": "A car available for hire with a driver, used for transporting passengers.",
+    "zone": "A designated area within a city with a specific purpose, such as residential or commercial use.",
+    "depot": "A place for the storage of large quantities of equipment, food, or some other commodity, often associated with transportation."
+  },
+  "words_coordinates": {
+    "pub": [
+      0,
+      1,
+      "vertical"
+    ],
+    "mall": [
+      3,
+      1,
+      "vertical"
+    ],
+    "galleria": [
+      0,
+      3,
+      "vertical"
+    ],
+    "lane": [
+      0,
+      7,
+      "vertical"
+    ],
+    "gate": [
+      1,
+      2,
+      "horizontal"
+    ],
+    "taxi": [
+      4,
+      5,
+      "vertical"
+    ],
+    "zone": [
+      3,
+      4,
+      "horizontal"
+    ],
+    "depot": [
+      0,
+      5,
+      "vertical"
+    ]
+  }
+}

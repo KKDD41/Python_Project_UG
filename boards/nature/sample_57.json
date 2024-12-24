@@ -1,0 +1,63 @@
+{
+  "board_size": 8,
+  "board": "#m#d###f\n#aleaf#i\n#r#l###r\n#s#tnest\n#h#a#p#h\n#u###o#o\n#l###n#r\nbluffd#n",
+  "number_of_intersections": 6,
+  "words_with_descriptions": {
+    "marsh": "A wetland area typically dominated by grasses and reeds.",
+    "delta": "A landform at the mouth of a river created by sediment deposits.",
+    "firth": "A long, narrow inlet of the sea, especially in Scotland.",
+    "pond": "A small body of still water formed naturally or by artificial means.",
+    "hull": "The main body of a ship or other vessel, including the bottom, sides, and deck but not the masts, superstructure, rigging, engines, and other fittings.",
+    "leaf": "The flat, typically green part of a plant, attached to a stem.",
+    "nest": "A structure or place made or chosen by a bird for laying eggs and sheltering its young.",
+    "bluff": "A steep cliff, bank, or promontory.",
+    "thorn": "A sharp, pointed spine or prong on a plant or branch."
+  },
+  "words_coordinates": {
+    "marsh": [
+      0,
+      1,
+      "vertical"
+    ],
+    "delta": [
+      0,
+      3,
+      "vertical"
+    ],
+    "firth": [
+      0,
+      7,
+      "vertical"
+    ],
+    "pond": [
+      4,
+      5,
+      "vertical"
+    ],
+    "hull": [
+      4,
+      1,
+      "vertical"
+    ],
+    "leaf": [
+      1,
+      2,
+      "horizontal"
+    ],
+    "nest": [
+      3,
+      4,
+      "horizontal"
+    ],
+    "bluff": [
+      7,
+      0,
+      "horizontal"
+    ],
+    "thorn": [
+      3,
+      7,
+      "vertical"
+    ]
+  }
+}
