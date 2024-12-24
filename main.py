@@ -8,12 +8,13 @@ from PyQt5.QtWidgets import (
     QLineEdit
 )
 from PyQt5.QtCore import QRect
-from board import BoardWidget
+from board_widget import BoardWidget
+from game_widget import GameWidget
 
 
 def main():
     app = QApplication(sys.argv)
-    ex = BoardWidget("./boards/animals/sample_1.json")
+    ex = GameWidget()
     sys.exit(app.exec_())
 
 
