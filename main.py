@@ -10,6 +10,7 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import QRect
 from board import BoardWidget
 
+
 def main():
     app = QApplication(sys.argv)
     ex = BoardWidget("./boards/animals/sample_1.json")

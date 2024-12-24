@@ -6,7 +6,8 @@ from PyQt5.QtWidgets import (
     QGridLayout,
     QLabel,
     QPushButton,
-    QLineEdit
+    QLineEdit,
+    QComboBox
 )
 from PyQt5.QtGui import QPainter, QColor
 
@@ -72,10 +73,62 @@ class BoardWidget(QWidget):
     def initUI(self):
         gridLayout = QGridLayout()
 
-        painter = QPainter(self)
-        painter.setPen(QColor(255, 255, 255))
-        painter.setBrush(QColor(200, 0, 0))
-        painter.drawRect(50, 50, 100, 100)
+
+        # Add control elements:
+        theme_label = QLabel("Theme:")
+        theme_dropdown = QComboBox()
+        theme_dropdown.addItems(["Animals", "City", "Nature", "Sport"])
+
+        gridLayout.addWidget(
+            theme_label,
+            0,
+            0
+        )
+        gridLayout.addWidget(
+            theme_dropdown,
+            0,
+            1
+        )
+
+        puzzle_label = QLabel("Puzzle:")
+        puzzle_counter = QLabel("1 / 10")
+
+        gridLayout.addWidget(
+            puzzle_label,
+            0,
+            2
+        )
+        gridLayout.addWidget(
+            puzzle_counter,
+            0,
+            3
+        )
+
+        previous_button = QPushButton("<<")
+        next_button = QPushButton(">>")
+        gridLayout.addWidget(
+            previous_button,
+            0,
+            4
+        )
+        gridLayout.addWidget(
+            next_button,
+            0,
+            5
+        )
+
+        complete_button = QPushButton("Complete")
+        exit_button = QPushButton("Exit")
+        gridLayout.addWidget(
+            complete_button,
+            0,
+            6
+        )
+        gridLayout.addWidget(
+            exit_button,
+            0,
+            7
+        )
 
         # Add grid with crossword:
         for row in range(self.board.side):
@@ -92,13 +145,13 @@ class BoardWidget(QWidget):
                                             width: 40px;
                                         }
                                     """)
-                    gridLayout.addWidget(letter_frame, row, col)
+                    gridLayout.addWidget(letter_frame, row + 1, col)
 
         # Add board assignment:
         board_assignment = QLabel(self.board.get_words_description_text())
         gridLayout.addWidget(
             board_assignment,
-            0,
+            1,
             self.board.side,
             self.board.side,
             2
