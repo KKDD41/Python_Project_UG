@@ -1,0 +1,69 @@
+{
+  "board_size": 8,
+  "board": "#b#m#s#f\nhena#w#i\n#e#c#a#n\n#teagleo\n#l#w#l#t\n#e#ogoat\n###w#w#e\n#walrusr",
+  "number_of_intersections": 6,
+  "words_with_descriptions": {
+    "beetle": "An insect with a hard shell and numerous species worldwide.",
+    "owl": "A nocturnal bird known for its distinctive hoot and rotating head.",
+    "swallow": "A small bird known for its swift, graceful flight and migration habits.",
+    "goat": "A hardy domesticated animal known for its climbing ability and diverse diet.",
+    "macaw": "A type of large, brightly colored parrot from the rainforests of Central and South America.",
+    "fin": "A thin component on the bodies of fish and some marine mammals used for stability in water.",
+    "otter": "An aquatic mammal known for its playfulness and ability to use tools.",
+    "eagle": "A large bird of prey noted for its powerful build and keen eyesight.",
+    "walrus": "A large marine mammal with distinctive tusks and whiskers.",
+    "hen": "A female bird, especially of a domestic fowl."
+  },
+  "words_coordinates": {
+    "beetle": [
+      0,
+      1,
+      "vertical"
+    ],
+    "owl": [
+      5,
+      3,
+      "vertical"
+    ],
+    "swallow": [
+      0,
+      5,
+      "vertical"
+    ],
+    "goat": [
+      5,
+      4,
+      "horizontal"
+    ],
+    "macaw": [
+      0,
+      3,
+      "vertical"
+    ],
+    "fin": [
+      0,
+      7,
+      "vertical"
+    ],
+    "otter": [
+      3,
+      7,
+      "vertical"
+    ],
+    "eagle": [
+      3,
+      2,
+      "horizontal"
+    ],
+    "walrus": [
+      7,
+      1,
+      "horizontal"
+    ],
+    "hen": [
+      1,
+      0,
+      "horizontal"
+    ]
+  }
+}

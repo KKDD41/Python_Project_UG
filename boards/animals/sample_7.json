@@ -1,0 +1,69 @@
+{
+  "board_size": 8,
+  "board": "###h#b#c\n#fbeeo#r\n#a#n#b#i\n#lynxc#c\n#c#b#a#k\n#oturtle\n#n#g###t\nswallowl",
+  "number_of_intersections": 7,
+  "words_with_descriptions": {
+    "falcon": "A bird of prey known for its incredible speed during hunting dives.",
+    "bobcat": "A North American wild cat known for its short tail and tufted ears.",
+    "swallow": "A small bird known for its swift, graceful flight and migration habits.",
+    "cricket": "An insect known for its chirping sound.",
+    "bug": "A general term for any small insect.",
+    "hen": "A female bird, especially of a domestic fowl.",
+    "owl": "A nocturnal bird known for its distinctive hoot and rotating head.",
+    "lynx": "A wild cat with characteristic tufts of fur on the tips of its ears.",
+    "bee": "An insect known for pollination and producing honey.",
+    "turtle": "A reptile with a hard shell that lives both on land and in water."
+  },
+  "words_coordinates": {
+    "falcon": [
+      1,
+      1,
+      "vertical"
+    ],
+    "bobcat": [
+      0,
+      5,
+      "vertical"
+    ],
+    "swallow": [
+      7,
+      0,
+      "horizontal"
+    ],
+    "cricket": [
+      0,
+      7,
+      "vertical"
+    ],
+    "bug": [
+      4,
+      3,
+      "vertical"
+    ],
+    "hen": [
+      0,
+      3,
+      "vertical"
+    ],
+    "owl": [
+      7,
+      5,
+      "horizontal"
+    ],
+    "lynx": [
+      3,
+      1,
+      "horizontal"
+    ],
+    "bee": [
+      1,
+      2,
+      "horizontal"
+    ],
+    "turtle": [
+      5,
+      2,
+      "horizontal"
+    ]
+  }
+}

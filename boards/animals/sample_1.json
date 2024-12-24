@@ -1,0 +1,69 @@
+{
+  "board_size": 8,
+  "board": "#h#w#b#o\ndoea#u#t\n#g#l#f#t\n#giraffe\n###u#a#r\n#a#s#l#a\n#p###o#n\neel#goat",
+  "number_of_intersections": 6,
+  "words_with_descriptions": {
+    "hog": "A term often used for a domestic pig.",
+    "buffalo": "A large bovine animal with horns, known for its strength.",
+    "ape": "A large primate without a tail, known for its intelligence and climbing skills.",
+    "eel": "A long, slender fish that can generate electric shocks.",
+    "ant": "A tiny insect known for its strength and cooperative colonies.",
+    "otter": "An aquatic mammal known for its playfulness and ability to use tools.",
+    "walrus": "A large marine mammal with distinctive tusks and whiskers.",
+    "doe": "A female deer.",
+    "giraffe": "The tallest living terrestrial animal, known for its long neck and legs.",
+    "goat": "A hardy domesticated animal known for its climbing ability and diverse diet."
+  },
+  "words_coordinates": {
+    "hog": [
+      0,
+      1,
+      "vertical"
+    ],
+    "buffalo": [
+      0,
+      5,
+      "vertical"
+    ],
+    "ape": [
+      5,
+      1,
+      "vertical"
+    ],
+    "eel": [
+      7,
+      0,
+      "horizontal"
+    ],
+    "ant": [
+      5,
+      7,
+      "vertical"
+    ],
+    "otter": [
+      0,
+      7,
+      "vertical"
+    ],
+    "walrus": [
+      0,
+      3,
+      "vertical"
+    ],
+    "doe": [
+      1,
+      0,
+      "horizontal"
+    ],
+    "giraffe": [
+      3,
+      1,
+      "horizontal"
+    ],
+    "goat": [
+      7,
+      4,
+      "horizontal"
+    ]
+  }
+}
