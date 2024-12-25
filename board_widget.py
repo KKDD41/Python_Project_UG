@@ -16,10 +16,11 @@ from board import Board
 class BoardWidget(QWidget):
     board = None
 
-    def __init__(self, board_filepath):
+    def __init__(self, board):
         super().__init__()
 
-        self.board = Board(board_filepath)
+        self.board = board
+
         self.initUI()
 
     def initUI(self):
@@ -54,6 +55,3 @@ class BoardWidget(QWidget):
 
         self.setLayout(gridLayout)
 
-        self.setWindowTitle('Crossword Puzzle')
-        self.setGeometry(200, 200, 1000, 700)
-        self.show()
