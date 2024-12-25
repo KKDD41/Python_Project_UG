@@ -37,7 +37,7 @@ class BoardWidget(QWidget):
                                             font-weight: bold;
                                             padding: 0px;
                                             margin: 0px;
-                                            height: 40px;  # Adjust the size to make it square
+                                            height: 40px;
                                             width: 40px;
                                         }
                                     """)

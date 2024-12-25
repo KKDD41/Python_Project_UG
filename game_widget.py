@@ -42,7 +42,13 @@ class GameWidget(QWidget):
         self.theme_dropdown.addItems(self.game_tasks_loader.themes)
         self.theme_dropdown.currentTextChanged.connect(self.switch_theme)
 
-        self.puzzle_counter = QLabel(f"0 / {len(self.board_widgets[self.current_theme])}")
+        self.puzzle_counter = QLabel(f"1 / {len(self.board_widgets[self.current_theme])}")
+
+        self.previous_button = QPushButton("<<")
+        self.next_button = QPushButton(">>")
+
+        self.previous_button.clicked.connect(self.switch_to_previous_board)
+        self.next_button.clicked.connect(self.switch_to_next_board)
 
         self.initUI()
 
@@ -78,15 +84,14 @@ class GameWidget(QWidget):
             3
         )
 
-        previous_button = QPushButton("<<")
-        next_button = QPushButton(">>")
+
         self.gridLayout.addWidget(
-            previous_button,
+            self.previous_button,
             0,
             4
         )
         self.gridLayout.addWidget(
-            next_button,
+            self.next_button,
             0,
             5
         )
@@ -117,14 +122,42 @@ class GameWidget(QWidget):
         self.setWindowTitle('Crossword Puzzle')
         self.setGeometry(200, 200, 1000, 700)
 
-    def switch_theme(self):
+    def set_current_board(self, new_index, new_theme):
         self.gridLayout.replaceWidget(
             self.get_current_board_widget(),
-            self.board_widgets[self.theme_dropdown.currentText()][0]
+            self.board_widgets[new_theme][new_index]
         )
         self.get_current_board_widget().setParent(None)
 
-        self.current_theme = self.theme_dropdown.currentText()
-        self.current_board_widget_index = 0
+        self.current_theme = new_theme
+        self.current_board_widget_index = new_index
 
-        self.puzzle_counter.setText(f"1 / {len(self.board_widgets[self.current_theme])}")
+        self.puzzle_counter.setText(f"{new_index + 1} / {len(self.board_widgets[new_theme])}")
+
+    def switch_theme(self):
+        self.set_current_board(
+            0,
+            self.theme_dropdown.currentText()
+        )
+
+    def switch_to_next_board(self):
+        if self.current_board_widget_index + 1 >= len(self.board_widgets[self.current_theme]):
+            index_to_set = 0
+        else:
+            index_to_set = self.current_board_widget_index + 1
+
+        self.set_current_board(
+            index_to_set,
+            self.current_theme
+        )
+
+    def switch_to_previous_board(self):
+        if self.current_board_widget_index - 1 <= -1:
+            index_to_set = len(self.board_widgets[self.current_theme]) - 1
+        else:
+            index_to_set = self.current_board_widget_index - 1
+
+        self.set_current_board(
+            index_to_set,
+            self.current_theme
+        )
