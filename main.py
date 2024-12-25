@@ -15,6 +15,7 @@ from game_widget import GameWidget
 def main():
     app = QApplication(sys.argv)
     ex = GameWidget()
+    ex.show()
     sys.exit(app.exec_())
 
 
