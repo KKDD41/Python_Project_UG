@@ -35,12 +35,15 @@ class BoardWidget(QWidget):
                                         QLineEdit {
                                             border: 2px solid black;
                                             font-weight: bold;
-                                            padding: 0px;
+                                            padding: 2px;
                                             margin: 0px;
                                             height: 40px;
                                             width: 40px;
+                                            text-align: center;
+                                            font-size: 16pt;
                                         }
                                     """)
+                    letter_frame.setFixedSize(40, 40)
                     gridLayout.addWidget(letter_frame, row + 1, col)
 
         # Add board assignment:

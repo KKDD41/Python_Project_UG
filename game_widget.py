@@ -56,6 +56,7 @@ class GameWidget(QWidget):
         return self.board_widgets[self.current_theme][self.current_board_widget_index]
 
     def initUI(self):
+        self.setFixedHeight(500)
 
         # Add control elements:
         theme_label = QLabel("Theme:")
