@@ -11,6 +11,7 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.QtGui import QPainter, QColor
 from board import Board
+from cell_widget import CellWidget
 
 
 class BoardWidget(QWidget):
@@ -30,20 +31,7 @@ class BoardWidget(QWidget):
         for row in range(self.board.side):
             for col in range(self.board.side):
                 if self.board.matrix[row][col] != '#':
-                    letter_frame = QLineEdit()
-                    letter_frame.setStyleSheet("""
-                                        QLineEdit {
-                                            border: 2px solid black;
-                                            font-weight: bold;
-                                            padding: 2px;
-                                            margin: 0px;
-                                            height: 40px;
-                                            width: 40px;
-                                            text-align: center;
-                                            font-size: 16pt;
-                                        }
-                                    """)
-                    letter_frame.setFixedSize(40, 40)
+                    letter_frame = CellWidget(self.board.get_task_number(row, col))
                     gridLayout.addWidget(letter_frame, row + 1, col)
 
         # Add board assignment:

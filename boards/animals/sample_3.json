@@ -1,1 +1,69 @@
-{"board_size": 8, "board": "###d####\n#w#otter\n#e#g#u#h\nmallarde\n#s#y#t#n\nbeen#l#f\n#l#x#e#i\nswallown", "number_of_intersections": 6, "words_with_descriptions": {"dog": "A loyal and domesticated animal often referred to as man's best friend.", "mallard": "A common wild duck known for its distinctive coloring.", "swallow": "A small bird known for its swift, graceful flight and migration habits.", "otter": "An aquatic mammal known for its playfulness and ability to use tools.", "weasel": "A small carnivorous mammal with a slender body, known for its cunning nature.", "hen": "A female bird, especially of a domestic fowl.", "bee": "An insect known for pollination and producing honey.", "fin": "A thin component on the bodies of fish and some marine mammals used for stability in water.", "turtle": "A reptile with a hard shell that lives both on land and in water.", "lynx": "A wild cat with characteristic tufts of fur on the tips of its ears."}, "words_coordinates": {"dog": [0, 3, "vertical"], "mallard": [3, 0, "horizontal"], "swallow": [7, 0, "horizontal"], "otter": [1, 3, "horizontal"], "weasel": [1, 1, "vertical"], "hen": [2, 7, "vertical"], "bee": [5, 0, "horizontal"], "fin": [5, 7, "vertical"], "turtle": [1, 5, "vertical"], "lynx": [3, 3, "vertical"]}}
+{
+  "board_size": 8,
+  "board": "###d####\n#w#otter\n#e#g#u#h\nmallarde\n#s#y#t#n\nbeen#l#f\n#l#x#e#i\nswallown",
+  "number_of_intersections": 6,
+  "words_with_descriptions": {
+    "dog": "A loyal and domesticated animal often referred to as man's best friend.",
+    "mallard": "A common wild duck known for its distinctive coloring.",
+    "swallow": "A small bird known for its swift, graceful flight and migration habits.",
+    "otter": "An aquatic mammal known for its playfulness and ability to use tools.",
+    "weasel": "A small carnivorous mammal with a slender body, known for its cunning nature.",
+    "hen": "A female bird, especially of a domestic fowl.",
+    "bee": "An insect known for pollination and producing honey.",
+    "fin": "A thin component on the bodies of fish and some marine mammals used for stability in water.",
+    "turtle": "A reptile with a hard shell that lives both on land and in water.",
+    "lynx": "A wild cat with characteristic tufts of fur on the tips of its ears."
+  },
+  "words_coordinates": {
+    "dog": [
+      0,
+      3,
+      "vertical"
+    ],
+    "mallard": [
+      3,
+      0,
+      "horizontal"
+    ],
+    "swallow": [
+      7,
+      0,
+      "horizontal"
+    ],
+    "otter": [
+      1,
+      3,
+      "horizontal"
+    ],
+    "weasel": [
+      1,
+      1,
+      "vertical"
+    ],
+    "hen": [
+      2,
+      7,
+      "vertical"
+    ],
+    "bee": [
+      5,
+      0,
+      "horizontal"
+    ],
+    "fin": [
+      5,
+      7,
+      "vertical"
+    ],
+    "turtle": [
+      1,
+      5,
+      "vertical"
+    ],
+    "lynx": [
+      3,
+      3,
+      "vertical"
+    ]
+  }
+}

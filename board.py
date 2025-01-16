@@ -24,6 +24,9 @@ class Board:
         self.words_with_descriptions = board_data['words_with_descriptions']
         self.words_coordinates = board_data['words_coordinates']
 
+        for i, word in enumerate(self.words_coordinates.keys()):
+            self.words_coordinates[word].append(i + 1)
+
         self.matrix = [list(row) for row in board_data['board'].split('\n')]
         self.matrix_current_fill = [['#'] * self.side for _ in range(self.side)]
 
@@ -37,12 +40,21 @@ class Board:
     def get_words_description_text(self):
         board_assignment_text = ""
 
-        for index, word_with_coordinates in enumerate(self.words_coordinates.items()):
+        for word_with_coordinates in self.words_coordinates.items():
             word = word_with_coordinates[0]
             coordinates = word_with_coordinates[1]
 
+            index = coordinates[3]
+
             board_assignment_text += f"""
-            {index + 1} ({coordinates[2]}). {self.words_with_descriptions[word]} 
+            {index} ({coordinates[2]}). {self.words_with_descriptions[word]} 
             """
 
         return board_assignment_text
+
+    def get_task_number(self, x, y):
+        for coordinates in self.words_coordinates.values():
+            if coordinates[0] == x and coordinates[1] == y:
+                return coordinates[3]
+
+        return None
