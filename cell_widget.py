@@ -35,3 +35,9 @@ class CellWidget(QLineEdit):
 
             task_label.setIndent(3)
 
+        self.textChanged.connect(self.limit_user_input)
+
+    def limit_user_input(self):
+        if len(self.text()) > 1:
+            self.setText(self.text()[:-1])
+
