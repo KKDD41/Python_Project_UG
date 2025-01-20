@@ -13,7 +13,7 @@ from PyQt5.QtWidgets import (
     QVBoxLayout
 )
 from PyQt5.QtCore import QRect
-
+from PyQt5 import QtGui
 from board import Board
 from board_widget import BoardWidget
 from game_tasks_loader import GameTasksLoader
@@ -65,9 +65,19 @@ class GameWidget(QWidget):
 
     def initUI(self):
         self.setFixedHeight(500)
+        self.setWindowIcon(QtGui.QIcon("./icons/crossword_icon.png"))
 
         # Add control elements:
         theme_label = QLabel("Theme:")
+        theme_label.setStyleSheet("""
+            QLabel {
+                font-weight: bold;
+                text-align: right;
+                font-size: 8pt;
+                align: right;
+                margin-left: 50px;
+            }
+        """)
 
         self.gridLayout.addWidget(
             theme_label,
@@ -81,6 +91,15 @@ class GameWidget(QWidget):
         )
 
         puzzle_label = QLabel("Puzzle:")
+        puzzle_label.setStyleSheet("""
+            QLabel {
+                font-weight: bold;
+                text-align: right;
+                font-size: 8pt;
+                align: right;
+                margin-left: 50px;
+            }
+        """)
 
         self.gridLayout.addWidget(
             puzzle_label,
@@ -115,6 +134,7 @@ class GameWidget(QWidget):
             7
         )
 
+        # adding current board widget
         self.gridLayout.addWidget(
             self.get_current_board_widget(),
             1,
@@ -180,8 +200,10 @@ class GameWidget(QWidget):
 
         if crossword_correctly_completed:
             label = QLabel("Congratulations! Answers are correct.")
+            dialog.setWindowIcon(QtGui.QIcon("./icons/tick.png"))
         else:
             label = QLabel("Answers are incorrect. Try once again.")
+            dialog.setWindowIcon(QtGui.QIcon("./icons/cross.png"))
 
         label.setStyleSheet("""
             QLabel {
